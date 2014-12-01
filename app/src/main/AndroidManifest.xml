@@ -20,6 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.digitalconstruction.myapplication.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.digitalconstruction.myapplication.DetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.digitalconstruction.myapplication.DetailActivity" />
+        </activity>
     </application>
 
 </manifest>
