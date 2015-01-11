@@ -25,6 +25,7 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.ShareActionProvider;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -229,6 +230,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             float windSpeedStr = data.getFloat(data.getColumnIndex(WeatherEntry.COLUMN_WIND_SPEED));
             float windDirStr = data.getFloat(data.getColumnIndex(WeatherEntry.COLUMN_DEGREES));
             mWindView.setText(Utility.getFormattedWind(getActivity(), windSpeedStr, windDirStr));
+            Log.d("MARK", "wind: Utility.getFormattedWind(getActivity(), windSpeedStr, windDirStr");
 
             // Read pressure from cursor and update view
             float pressure = data.getFloat(data.getColumnIndex(WeatherEntry.COLUMN_PRESSURE));
